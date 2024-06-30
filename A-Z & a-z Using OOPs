@@ -1,0 +1,34 @@
+OUTPUT OF THE PROGRAM:O/P : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                            abcdefghijklmnopqrstuvwxyz
+To print it in capital letter
+
+#include <iostream>
+using namespace std;
+
+class AlphabetPrinter {                                      //Class name as AlphabetPrinter
+public:
+    void printAlphabets() {                                  //Method name is given as printAlphabtes
+        cout << "The alphabets are: ";
+        for (int i = 65; i <= 90; ++i) {
+            cout << static_cast<char>(i) << " ";            //Use static_cast<char>(i) to print the integer i as a character.
+        }
+           cout << endl;
+        }
+        void printalphabets()
+        {
+            cout << "The alphabets are: ";
+            for(int i = 97;i <= 122;i++)
+            {
+                cout << static_cast<char>(i) << " ";
+            }
+            cout << endl;
+        }
+};
+
+int main() {
+    AlphabetPrinter printer;
+    printer.printAlphabets();                            //Creation of object printer.printAlphabets()
+    AlphabetPrinter Printer;
+    Printer.printalphabets();
+    return 0;
+}
