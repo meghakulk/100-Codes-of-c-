@@ -1,0 +1,35 @@
+OUTPUT OF THE PROGRAM : Enter the year:2024
+                        O/P : is a leap year
+
+#include <iostream>
+
+    // Write C++ code here
+    class Leapyear
+    {
+        public:
+        void year()                 //defining method
+        {
+            int year;
+            std::cout << "Enter the year:";
+            std::cin >> year;
+            if(year % 400 == 0 || year % 4 == 0)
+            {
+               std::cout << " is a leap year"<<std::endl;
+            }
+            else if(year % 100 == 0)
+           {
+               std::cout << "is not a leap year"<<std::endl;
+            }
+            else
+            {
+                std::cout << "is not a leap year"<< std::endl;
+            }
+        }
+    };
+
+int main()
+{
+    Leapyear print;
+    print.year();
+    return 0;
+}
