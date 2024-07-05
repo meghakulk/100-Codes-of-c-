@@ -1,0 +1,54 @@
+OUTPUT OF THE PROGRAM : Enter the operator(+,-,*,/),if x exit the program: +
+                        Enter the two operands: 3 4
+                        3.000000 + 4.000000= 7.000000
+#include <iostream>
+using namespace std;
+
+class  Calculator
+{
+    public:
+    void calci()
+    {
+        char ch;
+        double a,b;
+        while(1)
+        {
+        cout << "Enter the operator(+,-,*,/),""if x exit the program: ";
+        cin >> ch;
+        if(ch == 'x'){
+        exit(0);
+        }
+        cout << "Enter the two operands: ";
+        cin >> a >> b;
+        switch(ch)
+        {
+            case'+' :
+            printf("%lf + %lf= %lf",a,b,a+b);
+            break;
+            
+            case '-':
+            printf("%lf - %lf = %lf",a,b,a-b);
+            break;
+            
+            case '*':
+            printf("%lf * %lf = %lf",a,b,a*b);
+            break;
+            
+            case '/':
+            printf("%lf / %lf = %lf",a,b,a/b);
+            break;
+            
+            default:
+             printf("Error!please write a valid operator\n");
+        }
+        printf("\n");
+    }
+}
+};
+
+int main() {
+    // Write C++ code here
+  Calculator calc;
+  calc.calci();
+  return 0;
+}
