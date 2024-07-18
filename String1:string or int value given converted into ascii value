@@ -1,0 +1,33 @@
+Problem Statement:Write a function to print the sum of weight of the string as the ascii value of corresponding character
+#include <iostream>
+
+class ASCII
+{
+public:
+    int calculate_string_weight(char *str)
+{
+    int sum =0;
+    while(*str != '\0')
+    {
+        sum = sum + *str;
+        *str++;
+    }
+    return sum;
+}
+};
+
+
+int main() {
+    ASCII String;
+    char str[100];
+    
+    std::cout<<"Enter the String:";
+    std::cin >>str;
+    
+    int weight = String.calculate_string_weight(str);
+    std::cout << "String weight:" << weight<<std::endl;
+    
+return 0;  
+}
+OUTPUT OF THE PROBLEM:Enter the String:afgh
+                      String weight:406
